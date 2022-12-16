@@ -5,22 +5,75 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:bbhotel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <LinearGradientBrush.RelativeTransform>
-                    <TransformGroup>
-                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                        <SkewTransform CenterX="0.5" CenterY="0.5"/>
-                        <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </LinearGradientBrush.RelativeTransform>
-                <GradientStop Color="#FFC5ED72"/>
-                <GradientStop Color="#FF34BB9F" Offset="1"/>
-            </LinearGradientBrush>
-        </Grid.Background>
+        Title="MainWindow" Height="450" Width="700" WindowStyle="None" AllowsTransparency="True" WindowStartupLocation="CenterScreen">
 
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="90"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="/Resources/picture.png" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Margin="5,5,5,5"/>
+        <Grid Name="ToolBar" Grid.Row="0" Grid.Column="1" Background="Transparent" MouseDown="ToolBar_MouseDown">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="24" FontWeight="Bold" Foreground="#c97300" Margin="10, 0, 0, 0">BB</TextBlock>
+                <TextBlock FontSize="24" FontWeight="Bold" Foreground="#fc9f1d">Hotel</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Image Name="MinButton" Height="29" Width="29" Margin="0, 1, 5, 0" MouseDown="MinButton_MouseDown">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="/Resources/cancel.png"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsMouseOver, ElementName=MinButton}" Value="True">
+                                    <Setter Property="Source" Value="/Resources/cancel-activ.png"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+                <Image Name="ExitButton" Height="29" Width="29" Margin="0, 1, 3, 0" MouseDown="ExitButton_MouseDown">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="/Resources/close.png"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsMouseOver, ElementName=ExitButton}" Value="True">
+                                    <Setter Property="Source" Value="/Resources/close-activ.png"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+            </StackPanel>
+        </Grid>
+        <Grid Name="Navigation" Grid.Row="1" Grid.Column="1" Background="Transparent">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Grid>
+                    <Ellipse Width="50" Height="50" StrokeThickness="3" Stroke="#fc9f1d" StrokeDashCap="Round"/>
+                    <TextBlock FontSize="40" FontWeight="Bold" Foreground="#fc9f1d" HorizontalAlignment="Center" VerticalAlignment="Center">1</TextBlock>
+                </Grid>
+                <Line X1="0" Y1="30" X2="54" Y2="30" StrokeThickness="3" StrokeDashArray="4 2" Stroke="#fc9f1d" />
+                <Grid>
+                    <Ellipse Width="50" Height="50" StrokeThickness="3" Stroke="#c97300" StrokeDashCap="Round"/>
+                    <TextBlock FontSize="40" FontWeight="Bold" Foreground="#c97300" HorizontalAlignment="Center" VerticalAlignment="Center">2</TextBlock>
+                </Grid>
+                <Line X1="0" Y1="30" X2="54" Y2="30" StrokeThickness="3" StrokeDashArray="4 2" Stroke="#c97300" />
+                <Grid>
+                    <Ellipse Width="50" Height="50" StrokeThickness="3" Stroke="#c97300" StrokeDashCap="Round"/>
+                    <TextBlock FontSize="40" FontWeight="Bold" Foreground="#c97300" HorizontalAlignment="Center" VerticalAlignment="Center">3</TextBlock>
+                </Grid>
+                <Line X1="0" Y1="30" X2="54" Y2="30" StrokeThickness="3" StrokeDashArray="4 2" Stroke="#c97300" />
+                <Grid>
+                    <Ellipse Width="50" Height="50" StrokeThickness="3" Stroke="#c97300" StrokeDashCap="Round"/>
+                    <TextBlock FontSize="40" FontWeight="Bold" Foreground="#c97300" HorizontalAlignment="Center" VerticalAlignment="Center">4</TextBlock>
+                </Grid>
+            </StackPanel>
+        </Grid>
+        <Line Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" X1="10" Y1="2" X2="690" Y2="2" StrokeThickness="3" Stroke="#fc9f1d" />
     </Grid>
 </Window>
