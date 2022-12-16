@@ -23,6 +23,8 @@ namespace bbhotel
         public MainWindow()
         {
             InitializeComponent();
+            mainFrame.Navigate(new RegistrationPage());
+            Manager.mainFrame = mainFrame;
         }
 
         private void MinButton_MouseDown(object sender, MouseButtonEventArgs e)
@@ -49,6 +51,11 @@ namespace bbhotel
             {
                 this.DragMove();
             }
+        }
+
+        private void mainFrame_ContentRendered(object sender, EventArgs e)
+        {
+
         }
     }
 }

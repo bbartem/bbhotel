@@ -14,3 +14,8 @@ C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\bbhotel.csproj.Genera
 C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\bbhotel.csproj.CoreCompileInputs.cache
 C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\bbhotel.exe
 C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\bbhotel.pdb
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\RegistrationPage.g.cs
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\App.baml
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\RegistrationPage.baml
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\AuthorizationPage.g.cs
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\AuthorizationPage.baml
