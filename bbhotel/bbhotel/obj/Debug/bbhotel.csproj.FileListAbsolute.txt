@@ -19,3 +19,12 @@ C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\App.baml
 C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\RegistrationPage.baml
 C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\AuthorizationPage.g.cs
 C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\AuthorizationPage.baml
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\bin\Debug\EntityFramework.dll
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\bin\Debug\EntityFramework.xml
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\PersonalAccountPage.g.cs
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\bbhotel_Content.g.cs
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\PersonalAccountPage.baml
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\bbhotel.csproj.CopyComplete

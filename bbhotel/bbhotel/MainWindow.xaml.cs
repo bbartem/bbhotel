@@ -55,7 +55,7 @@ namespace bbhotel
 
         private void mainFrame_ContentRendered(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

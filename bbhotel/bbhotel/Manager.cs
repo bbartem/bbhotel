@@ -10,5 +10,6 @@ namespace bbhotel
     class Manager
     {
         public static Frame mainFrame { get; set; }
+        public static string fio;
     }
 }

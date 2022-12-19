@@ -23,6 +23,7 @@ namespace bbhotel
         public RegistrationPage()
         {
             InitializeComponent();
+
         }
 
         private void btnAuthorization_Click(object sender, RoutedEventArgs e)
