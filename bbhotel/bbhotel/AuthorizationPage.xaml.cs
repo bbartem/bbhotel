@@ -24,6 +24,16 @@ namespace bbhotel
         public AuthorizationPage()
         {
             InitializeComponent();
+            //Manager.mainWindow.number2_circle.Stroke = new SolidColorBrush(Color.FromRgb(201, 115, 0));
+            //Manager.mainWindow.number2_digit.Foreground = new SolidColorBrush(Color.FromRgb(201, 115, 0));
+            //Manager.mainWindow.number2_line.Stroke = new SolidColorBrush(Color.FromRgb(201, 115, 0));
+
+            //Manager.mainWindow.number3_circle.Stroke = new SolidColorBrush(Color.FromRgb(201, 115, 0));
+            //Manager.mainWindow.number3_digit.Foreground = new SolidColorBrush(Color.FromRgb(201, 115, 0));
+            //Manager.mainWindow.number3_line.Stroke = new SolidColorBrush(Color.FromRgb(201, 115, 0));
+
+            //Manager.mainWindow.number4_circle.Stroke = new SolidColorBrush(Color.FromRgb(201, 115, 0));
+            //Manager.mainWindow.number4_digit.Foreground = new SolidColorBrush(Color.FromRgb(201, 115, 0));
         }
 
         private void btnRegistration_Click(object sender, RoutedEventArgs e)
@@ -35,7 +45,7 @@ namespace bbhotel
             int errors = 0;
             try
             {
-                foreach (var guest in BBHotelEntities.getContext().Guest.ToList())
+                foreach (var guest in BBHotelEntities1.getContext().Guest.ToList())
                 {
                     if (login == guest.login && password == guest.password)
                     {
@@ -55,9 +65,9 @@ namespace bbhotel
                     MessageBox.Show("Введены неверные данные", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Ошибка соединения с базой данных", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Ошибка соединения с базой данных, " + ex.StackTrace, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return false;
             }
             return false;
@@ -68,7 +78,12 @@ namespace bbhotel
             if(authorize(txtLogin.Text, txtPass.Password))
             {
                 MessageBox.Show("Вы успешно авторизованы", "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
-                Manager.mainFrame.Navigate(new PersonalAccountPage());
+                if(txtLogin.Text == "admin")
+                {
+                    Manager.mainFrame.Navigate(new PersonalAccountAdminPage());
+                }
+                else
+                    Manager.mainFrame.Navigate(new PersonalAccountPage());
             }
         }
     }

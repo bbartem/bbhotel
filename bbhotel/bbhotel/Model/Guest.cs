@@ -25,7 +25,7 @@ namespace bbhotel.Model
         public string password { get; set; }
         public string fio { get; set; }
         public string telephone { get; set; }
-        public System.DateTime date { get; set; }
+        public Nullable<System.DateTime> date { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<booking> booking { get; set; }

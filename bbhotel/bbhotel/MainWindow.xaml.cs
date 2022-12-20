@@ -23,8 +23,9 @@ namespace bbhotel
         public MainWindow()
         {
             InitializeComponent();
-            mainFrame.Navigate(new RegistrationPage());
+            mainFrame.Navigate(new AuthorizationPage());
             Manager.mainFrame = mainFrame;
+            Manager.mainWindow = this;
         }
 
         private void MinButton_MouseDown(object sender, MouseButtonEventArgs e)

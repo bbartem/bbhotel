@@ -24,6 +24,21 @@ namespace bbhotel
         {
             InitializeComponent();
             userInfo.Text = "Пользователь: " + Manager.fio;
+            Manager.mainWindow.number2_circle.Stroke = new SolidColorBrush(Color.FromRgb(252, 159, 29));
+            Manager.mainWindow.number2_digit.Foreground = new SolidColorBrush(Color.FromRgb(252, 159, 29));
+            Manager.mainWindow.number2_line.Stroke = new SolidColorBrush(Color.FromRgb(252, 159, 29));
+
+            Manager.mainWindow.number3_circle.Stroke = new SolidColorBrush(Color.FromRgb(252, 159, 29));
+            Manager.mainWindow.number3_digit.Foreground = new SolidColorBrush(Color.FromRgb(252, 159, 29));
+            Manager.mainWindow.number3_line.Stroke = new SolidColorBrush(Color.FromRgb(252, 159, 29));
+
+            Manager.mainWindow.number4_circle.Stroke = new SolidColorBrush(Color.FromRgb(252, 159, 29));
+            Manager.mainWindow.number4_digit.Foreground = new SolidColorBrush(Color.FromRgb(252, 159, 29));
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.mainFrame.Navigate(new AuthorizationPage());
         }
     }
 }

@@ -28,3 +28,9 @@ C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\PersonalAccountPage.g
 C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\bbhotel_Content.g.cs
 C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\PersonalAccountPage.baml
 C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\bbhotel.csproj.CopyComplete
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\PersonalAccountAdminPage.g.cs
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\PersonalAccountAdminPage.baml
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\EditorPage.g.cs
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\EditorPage.baml
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\RegistrationDataPage1.g.cs
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\RegistrationDataPage1.baml

@@ -13,18 +13,17 @@ namespace bbhotel.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BBHotelEntities : DbContext
+    public partial class BBHotelEntities1 : DbContext
     {
-        private static BBHotelEntities context;
-
-        public static BBHotelEntities getContext()
+        private static BBHotelEntities1 context;
+        public static BBHotelEntities1 getContext()
         {
-            if (context == null)
-                context = new BBHotelEntities();
+            if(context == null)
+                context = new BBHotelEntities1();
             return context;
         }
-        public BBHotelEntities()
-            : base("name=BBHotelEntities")
+        public BBHotelEntities1()
+            : base("name=BBHotelEntities1")
         {
         }
     

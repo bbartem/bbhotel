@@ -1,0 +1,46 @@
+﻿<Page x:Class="bbhotel.EditorPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:bbhotel"
+      mc:Ignorable="d" 
+      d:DesignHeight="457" d:DesignWidth="610"
+      Title="EditorPage">
+
+    <Grid Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="68"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <TextBlock Text="ADMIN-EDITOR" FontSize="30" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="#c97300"/>
+            <TextBlock Text=". . ." x:Name="HotelBB" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="Black" FontSize="24" Margin="0, 0, 20, 0"/>
+        </Grid>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <TextBlock Text="Название" FontSize="30" VerticalAlignment="Center" Margin="20" Foreground="#fc9f1d"/>
+            <TextBox Width="350" Height="35" VerticalAlignment="Center" FontSize="25" BorderThickness="0,0,0,3" Cursor="Pen" Text="{Binding name}" BorderBrush="#FFFC9F1D"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <TextBlock Text="Количество мест" FontSize="30" VerticalAlignment="Center" Margin="20" Foreground="#fc9f1d"/>
+            <TextBox Width="235" Height="35" VerticalAlignment="Center" FontSize="25" BorderThickness="0,0,0,3" Cursor="Pen" Text="{Binding quantity}" BorderBrush="#FFFC9F1D"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Orientation="Horizontal">
+            <TextBlock Text="Цена за сутки" FontSize="30" VerticalAlignment="Center" Margin="20" Foreground="#fc9f1d"/>
+            <TextBox Width="285" Height="35" VerticalAlignment="Center" FontSize="25" BorderThickness="0,0,0,3" Cursor="Pen" Text="{Binding cost}" Background="White" BorderBrush="#FFFC9F1D"/>
+        </StackPanel>
+        <Button HorizontalAlignment="Right" Width="120" Height="30" Margin="0, 0, 25, 0" Grid.Row="4" Cursor="Hand" Click="btnSave_Click" Name="btnSave">
+            <Button.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Rectangle RadiusX="10" RadiusY="10" StrokeThickness="3" Stroke="#fc9f1d"></Rectangle>
+                        <TextBlock Text="Сохранить" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#fc9f1d"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</Page>
