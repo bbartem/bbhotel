@@ -54,23 +54,23 @@
         <Grid Name="Navigation" Grid.Row="1" Grid.Column="1" Background="Transparent">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Grid>
-                    <Ellipse Width="50" Height="50" StrokeThickness="3" Stroke="#fc9f1d" StrokeDashCap="Round"/>
-                    <TextBlock FontSize="40" FontWeight="Bold" Foreground="#fc9f1d" HorizontalAlignment="Center" VerticalAlignment="Center">1</TextBlock>
+                    <Ellipse x:Name="number1_circle" Width="50" Height="50" StrokeThickness="3" Stroke="#fc9f1d" StrokeDashCap="Round"/>
+                    <TextBlock x:Name="number1_digit" FontSize="40" FontWeight="Bold" Foreground="#fc9f1d" HorizontalAlignment="Center" VerticalAlignment="Center">1</TextBlock>
                 </Grid>
-                <Line X1="0" Y1="30" X2="54" Y2="30" StrokeThickness="3" StrokeDashArray="4 2" Stroke="#fc9f1d" />
+                <Line x:Name="number1_line" X1="0" Y1="30" X2="54" Y2="30" StrokeThickness="3" StrokeDashArray="4 2" Stroke="#fc9f1d" />
                 <Grid>
-                    <Ellipse Width="50" Height="50" StrokeThickness="3" Stroke="#c97300" StrokeDashCap="Round"/>
-                    <TextBlock FontSize="40" FontWeight="Bold" Foreground="#c97300" HorizontalAlignment="Center" VerticalAlignment="Center">2</TextBlock>
+                    <Ellipse x:Name="number2_circle" Width="50" Height="50" StrokeThickness="3" Stroke="#c97300" StrokeDashCap="Round"/>
+                    <TextBlock x:Name="number2_digit" FontSize="40" FontWeight="Bold" Foreground="#c97300" HorizontalAlignment="Center" VerticalAlignment="Center">2</TextBlock>
                 </Grid>
-                <Line X1="0" Y1="30" X2="54" Y2="30" StrokeThickness="3" StrokeDashArray="4 2" Stroke="#c97300" />
+                <Line x:Name="number2_line" X1="0" Y1="30" X2="54" Y2="30" StrokeThickness="3" StrokeDashArray="4 2" Stroke="#c97300" />
                 <Grid>
-                    <Ellipse Width="50" Height="50" StrokeThickness="3" Stroke="#c97300" StrokeDashCap="Round"/>
-                    <TextBlock FontSize="40" FontWeight="Bold" Foreground="#c97300" HorizontalAlignment="Center" VerticalAlignment="Center">3</TextBlock>
+                    <Ellipse x:Name="number3_circle" Width="50" Height="50" StrokeThickness="3" Stroke="#c97300" StrokeDashCap="Round"/>
+                    <TextBlock x:Name="number3_digit" FontSize="40" FontWeight="Bold" Foreground="#c97300" HorizontalAlignment="Center" VerticalAlignment="Center">3</TextBlock>
                 </Grid>
-                <Line X1="0" Y1="30" X2="54" Y2="30" StrokeThickness="3" StrokeDashArray="4 2" Stroke="#c97300" />
+                <Line x:Name="number3_line" X1="0" Y1="30" X2="54" Y2="30" StrokeThickness="3" StrokeDashArray="4 2" Stroke="#c97300" />
                 <Grid>
-                    <Ellipse Width="50" Height="50" StrokeThickness="3" Stroke="#c97300" StrokeDashCap="Round"/>
-                    <TextBlock FontSize="40" FontWeight="Bold" Foreground="#c97300" HorizontalAlignment="Center" VerticalAlignment="Center">4</TextBlock>
+                    <Ellipse x:Name="number4_circle" Width="50" Height="50" StrokeThickness="3" Stroke="#c97300" StrokeDashCap="Round"/>
+                    <TextBlock x:Name="number4_digit" FontSize="40" FontWeight="Bold" Foreground="#c97300" HorizontalAlignment="Center" VerticalAlignment="Center">4</TextBlock>
                 </Grid>
             </StackPanel>
         </Grid>

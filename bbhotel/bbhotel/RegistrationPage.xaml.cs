@@ -23,11 +23,26 @@ namespace bbhotel
         public RegistrationPage()
         {
             InitializeComponent();
+            Manager.mainWindow.number2_circle.Stroke = new SolidColorBrush(Color.FromRgb(201, 115, 0));
+            Manager.mainWindow.number2_digit.Foreground = new SolidColorBrush(Color.FromRgb(201, 115, 0));
+            Manager.mainWindow.number2_line.Stroke = new SolidColorBrush(Color.FromRgb(201, 115, 0));
+
+            Manager.mainWindow.number3_circle.Stroke = new SolidColorBrush(Color.FromRgb(201, 115, 0));
+            Manager.mainWindow.number3_digit.Foreground = new SolidColorBrush(Color.FromRgb(201, 115, 0));
+            Manager.mainWindow.number3_line.Stroke = new SolidColorBrush(Color.FromRgb(201, 115, 0));
+
+            Manager.mainWindow.number4_circle.Stroke = new SolidColorBrush(Color.FromRgb(201, 115, 0));
+            Manager.mainWindow.number4_digit.Foreground = new SolidColorBrush(Color.FromRgb(201, 115, 0));
         }
 
         private void btnAuthorization_Click(object sender, RoutedEventArgs e)
         {
             Manager.mainFrame.Navigate(new AuthorizationPage());
+        }
+
+        private void btnEnterReg_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.mainFrame.Navigate(new RegistrationDataPage1());
         }
     }
 }

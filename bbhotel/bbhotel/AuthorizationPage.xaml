@@ -29,13 +29,13 @@
         </Grid>
         <StackPanel Orientation="Vertical" Grid.Row="1" VerticalAlignment="Bottom">
             <TextBlock Text="Логин" FontSize="24" Margin="50, 0, 0, 0" Foreground="#fc9f1d"/>
-            <TextBox Name="txtFio" Height="32" Width="320" HorizontalAlignment="Left" Margin="100, 0, 0, 0"/>
+            <TextBox x:Name="txtLogin" Height="32" Width="320" HorizontalAlignment="Left" Margin="100, 0, 0, 0"/>
         </StackPanel>
         <StackPanel Orientation="Vertical" Grid.Row="2" VerticalAlignment="Center">
             <TextBlock Text="Пароль" FontSize="24" Margin="50, 0, 0, 0" Foreground="#fc9f1d"/>
             <PasswordBox Name="txtPass" Height="32" Width="320" HorizontalAlignment="Left" Margin="100, 0, 0, 0"/>
         </StackPanel>
-        <Button HorizontalAlignment="Right" Width="90" Height="30" Margin="0, 0, 25, 0" Grid.Row="6" Cursor="Hand">
+        <Button HorizontalAlignment="Right" Width="90" Height="30" Margin="0, 0, 25, 0" Grid.Row="6" Cursor="Hand" Click="Button_Click">
             <Button.Template>
                 <ControlTemplate>
                     <Grid>
