@@ -1,4 +1,5 @@
-﻿using System;
+﻿using bbhotel.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace bbhotel
         public RegistrationDataPage1()
         {
             InitializeComponent();
+            ComboBBHotel.ItemsSource = BBHotelEntities1.getContext().apartment.ToList();
             Manager.mainWindow.number2_circle.Stroke = new SolidColorBrush(Color.FromRgb(252, 159, 29));
             Manager.mainWindow.number2_digit.Foreground = new SolidColorBrush(Color.FromRgb(252, 159, 29));
             Manager.mainWindow.number2_line.Stroke = new SolidColorBrush(Color.FromRgb(252, 159, 29));

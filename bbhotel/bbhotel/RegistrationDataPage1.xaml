@@ -23,7 +23,7 @@
         </Grid>
         <StackPanel Grid.Row="1" Orientation="Horizontal">
             <TextBlock Text="Комната: " FontSize="30" VerticalAlignment="Center" Margin="20" Foreground="#fc9f1d"/>
-            <ComboBox Width="350" Height="35" VerticalAlignment="Center" FontSize="25" BorderThickness="0,0,0,3" Cursor="Pen" Text="{Binding name}" BorderBrush="#FFFC9F1D"/>
+            <ComboBox Width="350" Height="35" VerticalAlignment="Center" FontSize="25" BorderThickness="0,0,0,3" Cursor="Pen" Text="{Binding name}" BorderBrush="#FFFC9F1D" x:Name="ComboBBHotel" DisplayMemberPath="Name"/>
         </StackPanel>
         <StackPanel Grid.Row="2" Orientation="Horizontal">
             <TextBlock Text="Цена/сутки:" FontSize="30" VerticalAlignment="Center" Margin="20" Foreground="#fc9f1d"/>

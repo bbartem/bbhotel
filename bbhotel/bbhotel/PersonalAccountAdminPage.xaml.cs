@@ -61,17 +61,32 @@ namespace bbhotel
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
-
+            Manager.mainFrame.Navigate(new EditorPage((sender as Button).DataContext as apartment));
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            Manager.mainFrame.Navigate(new EditorPage());
+            Manager.mainFrame.Navigate(new EditorPage(null));
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
+            var hotelIsFOrRemoving = RoomsHotel.SelectedItems.Cast<apartment>().ToList();
+            if (MessageBox.Show($"Вы точно хотите удалить следующие {hotelIsFOrRemoving.Count()} элементов?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    BBHotelEntities1.getContext().apartment.RemoveRange(hotelIsFOrRemoving);
+                    BBHotelEntities1.getContext().SaveChanges();
+                    MessageBox.Show("Данные удалены!");
 
+                    RoomsHotel.ItemsSource = BBHotelEntities1.getContext().apartment.ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
 }
