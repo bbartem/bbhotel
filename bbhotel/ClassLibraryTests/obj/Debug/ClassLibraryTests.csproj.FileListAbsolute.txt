@@ -1,0 +1,6 @@
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\ClassLibraryTests\bin\Debug\ClassLibraryTests.dll
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\ClassLibraryTests\bin\Debug\ClassLibraryTests.pdb
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\ClassLibraryTests\obj\Debug\ClassLibraryTests.csproj.AssemblyReference.cache
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\ClassLibraryTests\obj\Debug\ClassLibraryTests.csproj.CoreCompileInputs.cache
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\ClassLibraryTests\obj\Debug\ClassLibraryTests.dll
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\ClassLibraryTests\obj\Debug\ClassLibraryTests.pdb

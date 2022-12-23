@@ -17,35 +17,31 @@ using System.Windows.Shapes;
 namespace bbhotel
 {
     /// <summary>
-    /// Логика взаимодействия для AuthorizationPage.xaml
+    /// Авторизация
     /// </summary>
     public partial class AuthorizationPage : Page
     {
         public AuthorizationPage()
         {
             InitializeComponent();
-            //Manager.mainWindow.number2_circle.Stroke = new SolidColorBrush(Color.FromRgb(201, 115, 0));
-            //Manager.mainWindow.number2_digit.Foreground = new SolidColorBrush(Color.FromRgb(201, 115, 0));
-            //Manager.mainWindow.number2_line.Stroke = new SolidColorBrush(Color.FromRgb(201, 115, 0));
-
-            //Manager.mainWindow.number3_circle.Stroke = new SolidColorBrush(Color.FromRgb(201, 115, 0));
-            //Manager.mainWindow.number3_digit.Foreground = new SolidColorBrush(Color.FromRgb(201, 115, 0));
-            //Manager.mainWindow.number3_line.Stroke = new SolidColorBrush(Color.FromRgb(201, 115, 0));
-
-            //Manager.mainWindow.number4_circle.Stroke = new SolidColorBrush(Color.FromRgb(201, 115, 0));
-            //Manager.mainWindow.number4_digit.Foreground = new SolidColorBrush(Color.FromRgb(201, 115, 0));
         }
 
         private void btnRegistration_Click(object sender, RoutedEventArgs e)
         {
             Manager.mainFrame.Navigate(new RegistrationPage());
         }
+        /// <summary>
+        /// авторизация пользователя, проверка из БД
+        /// </summary>
+        /// <param name="login">логин из Button_Click</param>
+        /// <param name="password">пароль из Button_Click</param>
+        /// <returns></returns>
         private bool authorize(string login, string password)
         {
             int errors = 0;
             try
             {
-                foreach (var guest in BBHotelEntities1.getContext().Guest.ToList())
+                foreach (var guest in BBHotelEntities.getContext().Guest.ToList())
                 {
                     if (login == guest.login && password == guest.password)
                     {
@@ -72,7 +68,11 @@ namespace bbhotel
             }
             return false;
         }
-
+        /// <summary>
+        /// Кнопка входа в систему с проверкой пользователя
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if(authorize(txtLogin.Text, txtPass.Password))
@@ -83,7 +83,7 @@ namespace bbhotel
                     Manager.mainFrame.Navigate(new PersonalAccountAdminPage());
                 }
                 else
-                    Manager.mainFrame.Navigate(new PersonalAccountPage());
+                    Manager.mainFrame.Navigate(new RegistrationDataPage1());
             }
         }
     }

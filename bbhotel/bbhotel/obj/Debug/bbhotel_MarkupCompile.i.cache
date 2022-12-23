@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\App.xaml
-71062825279
-2-354395119
-211113898459
+9-1461467489
+21685825313
+24-221065426
 19198141603
-AuthorizationPage.xaml;EditorPage.xaml;MainWindow.xaml;PersonalAccountAdminPage.xaml;PersonalAccountPage.xaml;RegistrationDataPage1.xaml;RegistrationPage.xaml;
+AuthorizationPage.xaml;ChequePage.xaml;EditorPage.xaml;MainWindow.xaml;PersonalAccountAdminPage.xaml;PersonalAccountPage.xaml;RegistrationDataPage1.xaml;RegistrationDataPage2.xaml;RegistrationPage.xaml;
 
-True
+False
 

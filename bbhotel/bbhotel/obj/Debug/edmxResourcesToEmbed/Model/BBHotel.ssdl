@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище BBHotelModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="apartment">
+    <Key>
+      <PropertyRef Name="id_apartmen" />
+    </Key>
+    <Property Name="id_apartmen" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="quantity" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="cost" Type="nvarchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="apartments">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="quantity" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="cost" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="booking">
+    <Key>
+      <PropertyRef Name="id_booking" />
+    </Key>
+    <Property Name="id_booking" Type="int" Nullable="false" />
+    <Property Name="id_apartment" Type="int" Nullable="false" />
+    <Property Name="id_guest" Type="int" Nullable="false" />
+    <Property Name="rent_type" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="check_in" Type="date" Nullable="false" />
+    <Property Name="check_out" Type="date" Nullable="false" />
+    <Property Name="cost" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="date" Type="date" />
+  </EntityType>
+  <EntityType Name="Guest">
+    <Key>
+      <PropertyRef Name="id_guest" />
+    </Key>
+    <Property Name="id_guest" Type="int" Nullable="false" />
+    <Property Name="login" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fio" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="telephone" Type="nvarchar" MaxLength="18" Nullable="false" />
+    <Property Name="date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="HotelImage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="HotelId" Type="int" Nullable="false" />
+    <Property Name="ImageSource" Type="varbinary(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_booking_apartment">
+    <End Role="apartment" Type="Self.apartment" Multiplicity="1" />
+    <End Role="booking" Type="Self.booking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="apartment">
+        <PropertyRef Name="id_apartmen" />
+      </Principal>
+      <Dependent Role="booking">
+        <PropertyRef Name="id_apartment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_booking_Guest">
+    <End Role="Guest" Type="Self.Guest" Multiplicity="1" />
+    <End Role="booking" Type="Self.booking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Guest">
+        <PropertyRef Name="id_guest" />
+      </Principal>
+      <Dependent Role="booking">
+        <PropertyRef Name="id_guest" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище BBHotelModelContainer">
+    <EntitySet Name="apartment" EntityType="Self.apartment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="apartments" EntityType="Self.apartments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="booking" EntityType="Self.booking" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Guest" EntityType="Self.Guest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HotelImage" EntityType="Self.HotelImage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_booking_apartment" Association="Self.FK_booking_apartment">
+      <End Role="apartment" EntitySet="apartment" />
+      <End Role="booking" EntitySet="booking" />
+    </AssociationSet>
+    <AssociationSet Name="FK_booking_Guest" Association="Self.FK_booking_Guest">
+      <End Role="Guest" EntitySet="Guest" />
+      <End Role="booking" EntitySet="booking" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

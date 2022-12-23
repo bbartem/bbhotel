@@ -34,3 +34,7 @@ C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\EditorPage.g.cs
 C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\EditorPage.baml
 C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\RegistrationDataPage1.g.cs
 C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\RegistrationDataPage1.baml
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\ChequePage.g.cs
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\RegistrationDataPage2.g.cs
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\ChequePage.baml
+C:\Users\BB_Artem\GitHub\bbhotel\bbhotel\bbhotel\obj\Debug\RegistrationDataPage2.baml

@@ -17,54 +17,32 @@ using System.Windows.Shapes;
 namespace bbhotel
 {
     /// <summary>
-    /// Логика взаимодействия для EditorPage.xaml
+    /// Создание новых элементов
     /// </summary>
     public partial class EditorPage : Page
     {
-        private apartment _currentHotel = new apartment();
-        public EditorPage(apartment selectedBBHotel)
+        public EditorPage()
         {
             InitializeComponent();
-            if (selectedBBHotel != null)
-                _currentHotel = selectedBBHotel;
-            DataContext = _currentHotel;
-            
         }
-
+        /// <summary>
+        /// Сохранение новых элементов в БД
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            StringBuilder errors = new StringBuilder();
-
-            if (string.IsNullOrWhiteSpace(_currentHotel.name))
-                errors.AppendLine("Укажите название комнаты");
-            if (_currentHotel.quantity == "")
-                errors.AppendLine("Укажите количество людей");
-            if (_currentHotel.cost == "")
-                errors.AppendLine("Укажите стоимость");
-            if (errors.Length > 0)
+            if (nameField.Text == "" || quantityField.Text == "" || costField.Text == "")
             {
-                MessageBox.Show(errors.ToString());
-                return;
+                MessageBox.Show("Заполните все поля", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            if (_currentHotel.id_apartmen == 0)
+            else
             {
-                BBHotelEntities1.getContext().apartment.Add(_currentHotel);
-            }
-
-            try
-            {
-                BBHotelEntities1.getContext().SaveChanges();
+                BBHotelEntities.getContext().apartments.Add(new apartments { name = nameField.Text, cost = costField.Text, quantity = quantityField.Text });
+                BBHotelEntities.getContext().SaveChanges();
                 MessageBox.Show("Информация сохранена!");
-
                 Manager.mainFrame.Navigate(new PersonalAccountAdminPage());
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-            }
-
         }
-
-        
     }
 }

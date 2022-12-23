@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Books.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -68,39 +71,45 @@
     <Compile Include="AuthorizationPage.xaml.cs">
       <DependentUpon>AuthorizationPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ChequePage.xaml.cs">
+      <DependentUpon>ChequePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EditorPage.xaml.cs">
       <DependentUpon>EditorPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Manager.cs" />
     <Compile Include="Model\apartment.cs">
-      <DependentUpon>BBHotelModel.tt</DependentUpon>
+      <DependentUpon>BBHotel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\BBHotelModel.Context.cs">
+    <Compile Include="Model\apartments.cs">
+      <DependentUpon>BBHotel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BBHotel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BBHotelModel.Context.tt</DependentUpon>
+      <DependentUpon>BBHotel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\BBHotelModel.cs">
+    <Compile Include="Model\BBHotel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BBHotelModel.tt</DependentUpon>
+      <DependentUpon>BBHotel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\BBHotelModel.Designer.cs">
+    <Compile Include="Model\BBHotel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BBHotelModel.edmx</DependentUpon>
+      <DependentUpon>BBHotel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\booking.cs">
-      <DependentUpon>BBHotelModel.tt</DependentUpon>
+      <DependentUpon>BBHotel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Guest.cs">
-      <DependentUpon>BBHotelModel.tt</DependentUpon>
+      <DependentUpon>BBHotel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\HotelImage.cs">
-      <DependentUpon>BBHotelModel.tt</DependentUpon>
+      <DependentUpon>BBHotel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\sysdiagrams.cs">
-      <DependentUpon>BBHotelModel.tt</DependentUpon>
+      <DependentUpon>BBHotel.tt</DependentUpon>
     </Compile>
     <Compile Include="PersonalAccountAdminPage.xaml.cs">
       <DependentUpon>PersonalAccountAdminPage.xaml</DependentUpon>
@@ -111,10 +120,17 @@
     <Compile Include="RegistrationDataPage1.xaml.cs">
       <DependentUpon>RegistrationDataPage1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RegistrationDataPage2.xaml.cs">
+      <DependentUpon>RegistrationDataPage2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RegistrationPage.xaml.cs">
       <DependentUpon>RegistrationPage.xaml</DependentUpon>
     </Compile>
     <Page Include="AuthorizationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChequePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -146,6 +162,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="RegistrationDataPage2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RegistrationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -169,12 +189,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Model\BBHotelModel.edmx">
+    <EntityDeploy Include="Model\BBHotel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BBHotelModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>BBHotel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model\BBHotelModel.edmx.diagram">
-      <DependentUpon>BBHotelModel.edmx</DependentUpon>
+    <None Include="Model\BBHotel.edmx.diagram">
+      <DependentUpon>BBHotel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -214,15 +234,16 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\BBHotelModel.Context.tt">
+    <Resource Include="Books.ico" />
+    <Content Include="Model\BBHotel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BBHotelModel.edmx</DependentUpon>
-      <LastGenOutput>BBHotelModel.Context.cs</LastGenOutput>
+      <DependentUpon>BBHotel.edmx</DependentUpon>
+      <LastGenOutput>BBHotel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Model\BBHotelModel.tt">
+    <Content Include="Model\BBHotel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BBHotelModel.edmx</DependentUpon>
-      <LastGenOutput>BBHotelModel.cs</LastGenOutput>
+      <DependentUpon>BBHotel.edmx</DependentUpon>
+      <LastGenOutput>BBHotel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -23,38 +23,38 @@
         </Grid>
         <StackPanel Grid.Row="1" Orientation="Horizontal">
             <TextBlock Text="Комната: " FontSize="30" VerticalAlignment="Center" Margin="20" Foreground="#fc9f1d"/>
-            <ComboBox Width="350" Height="35" VerticalAlignment="Center" FontSize="25" BorderThickness="0,0,0,3" Cursor="Pen" Text="{Binding name}" BorderBrush="#FFFC9F1D" x:Name="ComboBBHotel" DisplayMemberPath="Name"/>
+            <ComboBox Width="350" Height="35" VerticalAlignment="Center" FontSize="25" BorderThickness="0,0,0,3" Cursor="Pen" Foreground="Black" BorderBrush="#FFFC9F1D" x:Name="ComboBBHotel" SelectionChanged="ComboBBHotel_SelectionChanged"/>
         </StackPanel>
         <StackPanel Grid.Row="2" Orientation="Horizontal">
             <TextBlock Text="Цена/сутки:" FontSize="30" VerticalAlignment="Center" Margin="20" Foreground="#fc9f1d"/>
-            <TextBlock Width="235" Height="35" VerticalAlignment="Center" FontSize="30" Cursor="Pen" Text="{Binding cost}"/>
+            <TextBlock Width="235" Height="35" VerticalAlignment="Center" FontSize="30" Cursor="Pen" x:Name="costField" Text="{Binding cost}"/>
         </StackPanel>
         <StackPanel Grid.Row="3" Orientation="Horizontal">
             <TextBlock Text="Количество людей:" FontSize="30" VerticalAlignment="Center" Margin="20" Foreground="#fc9f1d"/>
-            <TextBlock Width="285" Height="35" VerticalAlignment="Center" FontSize="30" Cursor="Pen" Text="{Binding quantity}"/>
+            <TextBlock Width="285" Height="35" VerticalAlignment="Center" FontSize="30" Cursor="Pen" x:Name="quantityField" Text="{Binding quantity}"/>
         </StackPanel>
         <StackPanel Grid.Row="4" Orientation="Horizontal">
             <TextBlock Text="Тип: " FontSize="30" VerticalAlignment="Center" Margin="20" Foreground="#fc9f1d"/>
-            <ComboBox Width="350" Height="35" VerticalAlignment="Center" FontSize="25" Cursor="Pen" BorderBrush="#FFFC9F1D">
+            <ComboBox Width="350" Height="35" VerticalAlignment="Center" FontSize="25" BorderThickness="0,0,0,3" Cursor="Pen" Foreground="Black" BorderBrush="#FFFC9F1D" x:Name="ComboBBHotelType">
                 <TextBlock>Бронирование</TextBlock>
                 <TextBlock>Въезд</TextBlock>
             </ComboBox>
         </StackPanel>
         <StackPanel Grid.Row="5" Orientation="Horizontal">
             <TextBlock Text="C" Foreground="#fc9f1d" FontSize="30" VerticalAlignment="Center" Margin="35, 0, 5, 0"/>
-            <DatePicker FontSize="20" VerticalAlignment="Center">
+            <DatePicker FontSize="20" VerticalAlignment="Center" x:Name="DatePickerStart" CalendarClosed="DatePickerStart_CalendarClosed">
 
             </DatePicker>
             <TextBlock Text="ПО" Foreground="#fc9f1d" FontSize="30" VerticalAlignment="Center" Margin="35, 0, 5, 0"/>
-            <DatePicker FontSize="20" VerticalAlignment="Center">
+            <DatePicker FontSize="20" VerticalAlignment="Center" x:Name="DatePickerEnd" CalendarClosed="DatePickerEnd_CalendarClosed">
 
             </DatePicker>
-            <TextBlock Text=". . . суток" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="#fc9f1d" Margin="50, 0, 0, 0"/>
+            <TextBlock Text=". . . суток" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="#fc9f1d" Margin="50, 0, 0, 0" x:Name="TextBlockDifference"/>
         </StackPanel>
         <Grid Grid.Row="6" >
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Итого: " FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#fc9f1d" Margin="20, 0, 0, 0"/>
-                <TextBlock Text=". . ." FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#fc9f1d"/>
+                <TextBlock Text="" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#fc9f1d" x:Name="TextBlockTotal"/>
             </StackPanel>
             <Button HorizontalAlignment="Right" Width="90" Height="30" Margin="0, 0, 25, 0" Cursor="Hand" Click="btnNext_Click" Name="btnSave">
                 <Button.Template>

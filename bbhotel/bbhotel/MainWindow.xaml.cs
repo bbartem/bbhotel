@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace bbhotel
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// MainWindow
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -28,16 +28,29 @@ namespace bbhotel
             Manager.mainWindow = this;
         }
 
+        /// <summary>
+        /// кнопка навигации для сварачивание окна
+        /// </summary>
+        /// <param name="sender">вызов сворачивание окна</param>
+        /// <param name="e">Событие</param>
         private void MinButton_MouseDown(object sender, MouseButtonEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
         }
-
+        /// <summary>
+        /// кнопка навигации для закрытие окна
+        /// </summary>
+        /// <param name="sender">вызов закрытие окна</param>
+        /// <param name="e">Событие</param>
         private void ExitButton_MouseDown(object sender, MouseButtonEventArgs e)
         {
             this.Close();
         }
-
+        /// <summary>
+        /// кнопка навигации для закрытие окна
+        /// </summary>
+        /// <param name="sender">вызов закрытие окна</param>
+        /// <param name="e">Событие</param>
         private void ToolBar_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -45,18 +58,17 @@ namespace bbhotel
                 this.DragMove();
             }
         }
-
+        /// <summary>
+        /// навигация для перемещение окна
+        /// </summary>
+        /// <param name="sender">вызов перемещение окна</param>
+        /// <param name="e">Событие</param>
         private void Navigation_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
             {
                 this.DragMove();
             }
-        }
-
-        private void mainFrame_ContentRendered(object sender, EventArgs e)
-        {
-            
         }
     }
 }
