@@ -75,6 +75,6 @@
             </StackPanel>
         </Grid>
         <Line Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" X1="10" Y1="2" X2="690" Y2="2" StrokeThickness="3" Stroke="#fc9f1d" Height="3" />
-        <Frame Name="mainFrame" Grid.Column="1" Grid.Row="3" NavigationUIVisibility="Hidden" ContentRendered="mainFrame_ContentRendered"></Frame>
+        <Frame Name="mainFrame" Grid.Column="1" Grid.Row="3" NavigationUIVisibility="Hidden"></Frame>
     </Grid>
 </Window>

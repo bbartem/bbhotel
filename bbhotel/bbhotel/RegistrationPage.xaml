@@ -44,7 +44,10 @@
             <TextBox Name="txtTel" Height="32" Width="320" HorizontalAlignment="Left" Margin="100, 0, 0, 0"/>
         </StackPanel>
         <StackPanel Orientation="Vertical" Grid.Row="4">
-            <TextBlock Text="Пароль" FontSize="24" Margin="50, 0, 0, 0" Foreground="#fc9f1d"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Пароль" FontSize="24" Margin="50, 0, 0, 0" Foreground="#fc9f1d"/>
+                <TextBlock Text=". . ." FontSize="15" Margin="50, 0, 0, 0" Foreground="Black" x:Name="level"/>
+            </StackPanel>
             <PasswordBox Name="txtPass" Height="32" Width="320" HorizontalAlignment="Left" Margin="100, 0, 0, 0"/>
         </StackPanel>
         <StackPanel Orientation="Vertical" Grid.Row="5">

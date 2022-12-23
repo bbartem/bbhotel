@@ -22,15 +22,15 @@
         </Grid>
         <StackPanel Grid.Row="1" Orientation="Horizontal">
             <TextBlock Text="Название" FontSize="30" VerticalAlignment="Center" Margin="20" Foreground="#fc9f1d"/>
-            <TextBox Width="350" Height="35" VerticalAlignment="Center" FontSize="25" BorderThickness="0,0,0,3" Cursor="Pen" Text="{Binding name}" BorderBrush="#FFFC9F1D"/>
+            <TextBox x:Name="nameField" Width="350" Height="35" VerticalAlignment="Center" FontSize="25" BorderThickness="0,0,0,3" Cursor="Pen" Text="{Binding name}" BorderBrush="#FFFC9F1D"/>
         </StackPanel>
         <StackPanel Grid.Row="2" Orientation="Horizontal">
             <TextBlock Text="Количество мест" FontSize="30" VerticalAlignment="Center" Margin="20" Foreground="#fc9f1d"/>
-            <TextBox Width="235" Height="35" VerticalAlignment="Center" FontSize="25" BorderThickness="0,0,0,3" Cursor="Pen" Text="{Binding quantity}" BorderBrush="#FFFC9F1D"/>
+            <TextBox x:Name="quantityField" Width="235" Height="35" VerticalAlignment="Center" FontSize="25" BorderThickness="0,0,0,3" Cursor="Pen" Text="{Binding quantity}" BorderBrush="#FFFC9F1D"/>
         </StackPanel>
         <StackPanel Grid.Row="3" Orientation="Horizontal">
             <TextBlock Text="Цена за сутки" FontSize="30" VerticalAlignment="Center" Margin="20" Foreground="#fc9f1d"/>
-            <TextBox Width="285" Height="35" VerticalAlignment="Center" FontSize="25" BorderThickness="0,0,0,3" Cursor="Pen" Text="{Binding cost}" Background="White" BorderBrush="#FFFC9F1D"/>
+            <TextBox x:Name="costField" Width="285" Height="35" VerticalAlignment="Center" FontSize="25" BorderThickness="0,0,0,3" Cursor="Pen" Text="{Binding cost}" Background="White" BorderBrush="#FFFC9F1D"/>
         </StackPanel>
         <Button HorizontalAlignment="Right" Width="120" Height="30" Margin="0, 0, 25, 0" Grid.Row="4" Cursor="Hand" Click="btnSave_Click" Name="btnSave">
             <Button.Template>

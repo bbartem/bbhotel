@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace bbhotel
 {
     /// <summary>
-    /// Логика взаимодействия для PersonalAccountPage.xaml
+    /// Личный кабинет
     /// </summary>
     public partial class PersonalAccountPage : Page
     {

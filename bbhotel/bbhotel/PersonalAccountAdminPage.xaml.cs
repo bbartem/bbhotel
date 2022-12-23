@@ -17,17 +17,13 @@ using System.Windows.Shapes;
 namespace bbhotel
 {
     /// <summary>
-    /// Логика взаимодействия для PersonalAccountAdminPage.xaml
+    /// Личный кабинета Админа
     /// </summary>
     public partial class PersonalAccountAdminPage : Page
     {
-        public object Cost { get; internal set; }
-        public object Quantity { get; internal set; }
-
         public PersonalAccountAdminPage()
         {
             InitializeComponent();
-            //RoomsHotel.ItemsSource = BBHotelEntities1.getContext().apartment.ToList();
             Manager.mainWindow.number2_circle.Stroke = new SolidColorBrush(Color.FromRgb(255, 0, 0));
             Manager.mainWindow.number2_digit.Foreground = new SolidColorBrush(Color.FromRgb(255, 0, 0));
             Manager.mainWindow.number2_line.Stroke = new SolidColorBrush(Color.FromRgb(255, 128, 0));
@@ -49,29 +45,47 @@ namespace bbhotel
             Manager.mainFrame.Navigate(new AuthorizationPage());
         }
 
+        /// <summary>
+        /// Вывод данных из БД
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
             if (Visibility == Visibility.Visible)
             {
-                BBHotelEntities1.getContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-                RoomsHotel.ItemsSource = BBHotelEntities1.getContext().apartment.ToList();
+                BBHotelEntities.getContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                RoomsHotel.ItemsSource = BBHotelEntities.getContext().apartments.ToList();
             }
-        }
-
-
-        private void btnEdit_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             Manager.mainFrame.Navigate(new EditorPage());
         }
-
+        /// <summary>
+        /// Удаление элементов из БД
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
+            var hotelIsFOrRemoving = RoomsHotel.SelectedItems.Cast<apartments>().ToList();
+            if (MessageBox.Show($"Вы точно хотите удалить следующие {hotelIsFOrRemoving.Count()} элементов?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    BBHotelEntities.getContext().apartments.RemoveRange(hotelIsFOrRemoving);
+                    BBHotelEntities.getContext().SaveChanges();
+                    MessageBox.Show("Данные удалены!");
 
+                    RoomsHotel.ItemsSource = BBHotelEntities.getContext().apartments.ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
 }
