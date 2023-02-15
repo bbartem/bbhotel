@@ -1,0 +1,13 @@
+﻿<Page x:Class="kkep.GreetingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:kkep"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="650"
+      Title="GreetingPage">
+    <Grid>
+        <TextBlock Text="Привет, мир!" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+    </Grid>
+</Page>

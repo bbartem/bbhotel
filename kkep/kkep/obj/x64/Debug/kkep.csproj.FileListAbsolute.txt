@@ -1,0 +1,8 @@
+C:\Users\BB_Artem\GitHub\bbhotel\kkep\kkep\obj\x64\Debug\kkep.csproj.AssemblyReference.cache
+C:\Users\BB_Artem\GitHub\bbhotel\kkep\kkep\obj\x64\Debug\kkep.csproj.SuggestedBindingRedirects.cache
+C:\Users\BB_Artem\GitHub\bbhotel\kkep\kkep\obj\x64\Debug\Exercise2.g.cs
+C:\Users\BB_Artem\GitHub\bbhotel\kkep\kkep\obj\x64\Debug\Exercise3.g.cs
+C:\Users\BB_Artem\GitHub\bbhotel\kkep\kkep\obj\x64\Debug\MainWindow.g.cs
+C:\Users\BB_Artem\GitHub\bbhotel\kkep\kkep\obj\x64\Debug\App.g.cs
+C:\Users\BB_Artem\GitHub\bbhotel\kkep\kkep\obj\x64\Debug\kkep_MarkupCompile.cache
+C:\Users\BB_Artem\GitHub\bbhotel\kkep\kkep\obj\x64\Debug\kkep_MarkupCompile.lref
