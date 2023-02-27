@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="10">
             <Label Content="Выберите день:"/>
-            <ComboBox x:Name="DayComboBox" Width="100" Margin="5" SelectionChanged="DayComboBox_SelectionChanged"/>
+            <ComboBox x:Name="DayComboBox" Width="136" Margin="5" SelectionChanged="DayComboBox_SelectionChanged"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="1">
             <StackPanel Orientation="Vertical">

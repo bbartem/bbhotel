@@ -20,7 +20,7 @@
         <Image Source="/Resources/logo.png" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Margin="5,5,5,5"/>
         <Grid Name="ToolBar" Grid.Row="0" Grid.Column="1" Background="Transparent" MouseDown="ToolBar_MouseDown">
             <StackPanel Orientation="Horizontal">
-                <TextBlock FontSize="24" FontWeight="Bold" Foreground="#52a9ef" Margin="10, 0, 0, 0">BB</TextBlock>
+                <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF52A9EF" Margin="10, 0, 0, 0">BB</TextBlock>
                 <TextBlock FontSize="24" FontWeight="Bold" Foreground="#56963b">.kkep</TextBlock>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
@@ -78,7 +78,7 @@
                 <Line x:Name="number2_line" X1="0" Y1="30" X2="54" Y2="30" StrokeThickness="3" StrokeDashArray="4 2" Stroke="#c97300" />
                 <Grid>
                     <Button Name="btnNumber3" VerticalAlignment="Bottom" Click="btnNumber3_Click" Width="50" Height="50" Background="Transparent" BorderBrush="Transparent" Margin="0 0 0 5"/>
-                    <Ellipse x:Name="number3_circle" Width="50" Height="50" StrokeThickness="3" Stroke="#c97300" StrokeDashCap="Round"/>
+                    <Ellipse x:Name="number3_circle" Width="50" Height="50" StrokeThickness="3" Stroke="#c97300" StrokeDashCap="Round" HorizontalAlignment="Left" Margin="0,5,0,5"/>
                     <TextBlock x:Name="number3_digit" FontSize="40" FontWeight="Bold" Foreground="#c97300" HorizontalAlignment="Center" VerticalAlignment="Center">3</TextBlock>
                 </Grid>
             </StackPanel>
